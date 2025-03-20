@@ -13,6 +13,10 @@
             --button-color: #1d3b5a;
             --background-light: #f8f9fa;
             --font-family: 'Inter', sans-serif;
+            --padding-default: 20px;
+            --font-size-default: 18px;
+            --font-size-large: 36px;
+            --font-size-small: 16px;
         }
 
         body {
@@ -30,7 +34,7 @@
 
         .header {
             background-color: var(--secondary-color);
-            padding: 20px 0;
+            padding: var(--padding-default) 0;
         }
 
         .nav ul {
@@ -45,7 +49,7 @@
         .nav a {
             color: var(--primary-color);
             text-decoration: none;
-            font-size: 18px;
+            font-size: var(--font-size-default);
             font-weight: bold;
         }
 
@@ -55,13 +59,13 @@
         }
 
         .hero-title {
-            font-size: 36px;
+            font-size: var(--font-size-large);
             color: var(--text-color);
             margin-bottom: 10px;
         }
 
         .hero-subtitle {
-            font-size: 18px;
+            font-size: var(--font-size-small);
             color: #555;
             margin-bottom: 20px;
         }
@@ -72,7 +76,7 @@
             background-color: var(--button-color);
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: var(--font-size-default);
             border-radius: 5px;
         }
 
@@ -81,13 +85,26 @@
             background-color: var(--background-light);
         }
 
+        .about img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            margin: 20px 0;
+        }
+
         .stats {
             background-color: var(--primary-color);
             color: var(--secondary-color);
             padding: 40px 0;
             display: flex;
-            justify-content: center;
-            gap: 40px;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stats div {
+            flex: 1;
+            text-align: center;
         }
 
         .video-section {
@@ -100,6 +117,97 @@
             text-align: center;
             padding: 20px 0;
             margin-top: 50px;
+        }
+
+        /* Media Queries for responsiveness */
+        @media screen and (max-width: 1024px) {
+            .container {
+                width: 90%;
+            }
+
+            .hero-title {
+                font-size: 30px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .nav ul {
+                gap: 15px;
+            }
+
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .about img {
+                max-width: 100%;
+            }
+
+            .video-section video {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-title {
+                font-size: 24px;
+            }
+
+            .hero-subtitle {
+                font-size: 12px;
+            }
+
+            .stats {
+                gap: 15px;
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            .nav a {
+                font-size: 14px;
+            }
+
+            .video-section video {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -143,7 +251,7 @@
             <div class="container">
                 <h3>How I Work</h3>
                 <p>A short description of the work process.</p>
-                <video width="80%" controls>
+                <video controls>
                     <source src="https://youtu.be/I-ToRVJdm-Y" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
