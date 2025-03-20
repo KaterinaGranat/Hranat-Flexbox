@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design & Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #1d3b5a;
+            --secondary-color: #ffffff;
+            --text-color: #333;
+            --button-color: #1d3b5a;
+            --background-light: #f8f9fa;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header {
+            background-color: var(--secondary-color);
+            padding: 20px 0;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 100px 0;
+            background-color: var(--secondary-color);
+        }
+
+        .hero-title {
+            font-size: 36px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--button-color);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .about {
+            padding: 50px 0;
+            background-color: var(--background-light);
+        }
+
+        .stats {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .video-section {
+            padding: 50px 0;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Process</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Design & Layout</h2>
+                <p class="hero-subtitle">A short text about the benefits of design and layout.</p>
+                <a href="#" class="btn">Contact Me</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <img src="https://st2.depositphotos.com/1032577/5312/i/450/depositphotos_53128333-stock-photo-about-me-sign.jpg" alt="About Me">
+                <h3>About Me</h3>
+                <p>A short description about you and your experience.</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div>40+ Projects</div>
+            <div>40+ Clients</div>
+            <div>40+ Reviews</div>
+        </section>
+
+        <section class="video-section">
+            <div class="container">
+                <h3>How I Work</h3>
+                <p>A short description of the work process.</p>
+                <video width="80%" controls>
+                    <source src="https://youtu.be/I-ToRVJdm-Y" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 All rights reserved.</p>
+    </footer>
+</body>
+</html>
